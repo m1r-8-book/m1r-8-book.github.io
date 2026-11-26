@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文献小镇登录入口_文献小镇账号登录与学术资源_文献检索与文献管理</title>
+<meta name="description" content="文献小镇登录入口提供文献小镇账号登录、学术文献检索、文献管理与论文查重等具体内容，包含登录流程说明、资源库目录、常见问题与用户实战经验，适合高校学生与科研工作者查阅。">
+<meta name="keywords" content="学术文献检索,文献管理工具,论文查重系统,文献小镇账号,科研资源平台">
+<style>
+:root{
+  --ink:#1b2430;
+  --ink-2:#3a4757;
+  --ink-3:#63707f;
+  --line:#dfe5ec;
+  --line-2:#eef2f7;
+  --bg:#f5f7fa;
+  --panel:#ffffff;
+  --brand:#1f5f8b;
+  --brand-2:#2f7fb5;
+  --brand-soft:#e7f1f8;
+  --accent:#c96a2b;
+  --accent-soft:#fbeee3;
+  --green:#2c7a63;
+  --green-soft:#e6f3ee;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(27,36,48,.05),0 8px 24px rgba(27,36,48,.06);
+  --shadow-sm:0 1px 2px rgba(27,36,48,.06);
+  --maxw:1340px;
+  --stick:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.2px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:1.25em}
+li{margin:4px 0}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:4px}
+
+/* ===== 吸顶区 ===== */
+.stickwrap{position:sticky;top:0;z-index:50}
+.topbar{
+  background:linear-gradient(90deg,#123c58,#1f5f8b 60%,#2f7fb5);
+  color:#eaf3fa;
+  font-size:13px;
+}
+.topbar-in{
+  max-width:var(--maxw);margin:0 auto;padding:7px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.topbar .pill{
+  background:rgba(255,255,255,.16);border-radius:999px;padding:1px 9px;font-size:12px;letter-spacing:.5px;
+}
+.topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.topbar .tb-list{display:flex;gap:18px;flex-wrap:wrap;margin-left:auto;font-size:12.5px;opacity:.94}
+.topbar .tb-list span{white-space:nowrap}
+
+.sitehead{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow-sm);
+}
+.head-in{
+  max-width:var(--maxw);margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand-mark{width:38px;height:38px;flex:0 0 38px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--brand)}
+.brand-sub{font-size:11px;color:var(--ink-3);letter-spacing:2.4px}
+.nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:6px}
+.nav a{
+  display:inline-block;padding:6px 11px;border-radius:999px;color:var(--ink-2);font-size:14px;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+.head-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.searchbox{position:relative;display:flex;align-items:center}
+.searchbox input{
+  width:224px;padding:7px 34px 7px 12px;border:1px solid var(--line);border-radius:999px;
+  font-size:13.5px;background:#fbfcfe;color:var(--ink);
+}
+.searchbox input:focus{border-color:var(--brand-2);background:#fff;outline:none;box-shadow:0 0 0 3px rgba(47,127,181,.13)}
+.searchbox button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;border:0;border-radius:50%;background:var(--brand);color:#fff;cursor:pointer;
+  display:grid;place-items:center;font-size:13px;
+}
+.btn-login{
+  background:var(--brand);color:#fff;border:0;border-radius:999px;padding:8px 18px;font-size:14px;
+  font-weight:600;cursor:pointer;
+}
+.btn-login:hover{background:#184c70}
+.btn-ghost{
+  background:#fff;color:var(--brand);border:1px solid #c3d7e6;border-radius:999px;padding:7px 16px;
+  font-size:14px;font-weight:600;cursor:pointer;
+}
+.btn-ghost:hover{background:var(--brand-soft)}
+
+/* ===== 首屏 ===== */
+.hero{
+  background:
+    radial-gradient(900px 380px at 82% -10%,rgba(47,127,181,.16),transparent 70%),
+    radial-gradient(700px 320px at 4% 110%,rgba(201,106,43,.10),transparent 70%),
+    linear-gradient(180deg,#fbfdff,#f0f5fa);
+  border-bottom:1px solid var(--line);
+}
+.hero-in{
+  max-width:var(--maxw);margin:0 auto;padding:38px 20px 34px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #cfe0ee;
+  color:var(--brand);border-radius:999px;padding:4px 13px;font-size:12.5px;font-weight:600;margin-bottom:14px;
+}
+.hero-kicker i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+.hero h1{
+  font-size:clamp(28px,3.4vw,42px);letter-spacing:1px;color:#123c58;margin-bottom:14px;
+}
+.hero h1 em{font-style:normal;color:var(--brand-2)}
+.hero-desc{font-size:15.5px;color:var(--ink-2);max-width:36em;margin-bottom:20px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.cta-main{
+  background:var(--brand);color:#fff;border:0;border-radius:10px;padding:11px 26px;font-size:15px;
+  font-weight:700;cursor:pointer;box-shadow:0 6px 16px rgba(31,95,139,.22);
+}
+.cta-main:hover{background:#184c70}
+.cta-sub{
+  background:#fff;color:var(--brand);border:1px solid #c3d7e6;border-radius:10px;padding:11px 22px;
+  font-size:15px;font-weight:600;cursor:pointer;
+}
+.cta-sub:hover{background:var(--brand-soft)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px dashed #cfdbe7;padding-top:16px}
+.hero-stats div{font-size:12.5px;color:var(--ink-3)}
+.hero-stats b{display:block;font-size:20px;color:var(--brand);font-weight:800;line-height:1.3}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 30px rgba(31,95,139,.14))}
+.art-caption{
+  margin-top:10px;font-size:12px;color:var(--ink-3);text-align:center;letter-spacing:.3px;
+}
+
+/* ===== 布局 ===== */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:26px 20px 10px}
+.layout{
+  display:grid;grid-template-columns:186px minmax(0,1fr) 268px;gap:24px;align-items:start;
+}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.side-sticky{position:sticky;top:calc(var(--stick) + 14px);display:flex;flex-direction:column;gap:16px}
+.side-title{
+  font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:1.4px;
+  padding:12px 14px 8px;border-bottom:1px solid var(--line-2);
+}
+.chan-list{list-style:none;margin:0;padding:8px 8px 12px}
+.chan-list a{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  padding:7px 10px;border-radius:var(--radius-sm);color:var(--ink-2);font-size:14px;
+}
+.chan-list a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+.chan-list .cnt{font-size:11.5px;color:#93a1b0;background:#f2f6fa;border-radius:999px;padding:0 7px;line-height:18px}
+.chan-list a:hover .cnt{background:#fff;color:var(--brand-2)}
+
+.side-box{padding:0 0 10px}
+.side-box .list{list-style:none;margin:0;padding:6px 14px 6px}
+.side-box .list li{display:flex;gap:8px;font-size:13.5px;padding:6px 0;border-bottom:1px dashed var(--line-2);line-height:1.55}
+.side-box .list li:last-child{border-bottom:0}
+.rk{font-size:11.5px;font-weight:800;color:#fff;background:#b9c6d3;border-radius:4px;min-width:20px;height:18px;display:grid;place-items:center;margin-top:3px;flex:0 0 auto}
+.rk.top{background:var(--accent)}
+.rk.top2{background:var(--brand-2)}
+.side-box .list a{color:var(--ink-2)}
+.side-box .list a:hover{color:var(--brand)}
+.side-note{font-size:12px;color:var(--ink-3);padding:4px 14px 10px;line-height:1.6}
+
+.main{display:flex;flex-direction:column;gap:22px;min-width:0}
+.sec{padding:20px 22px 22px}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head h2{font-size:20px;color:#123c58}
+.sec-head .h2tag{font-size:12px;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:1px 9px;font-weight:600}
+.sec-head .more{margin-left:auto;font-size:13px;color:var(--ink-3)}
+.sec-lead{font-size:13.5px;color:var(--ink-3);margin-bottom:16px}
+.anchor{scroll-margin-top:var(--stick)}
+
+/* 概览 */
+.overview p{color:var(--ink-2);font-size:14.8px}
+.overview .kv{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.kv span{background:#f2f7fb;border:1px solid #dbe8f2;border-radius:999px;padding:2px 11px;font-size:12.5px;color:var(--brand)}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;transition:box-shadow .18s,transform .18s,border-color .18s;
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:#c8dbe9}
+.card figure{margin:0;position:relative;background:#eef3f8}
+.card img{width:100%;height:132px;object-fit:cover}
+.card .badge{
+  position:absolute;left:8px;top:8px;background:rgba(18,60,88,.86);color:#fff;font-size:11.5px;
+  border-radius:6px;padding:1px 8px;letter-spacing:.4px;
+}
+.card-body{padding:11px 13px 13px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-body h3{font-size:15px;color:var(--ink)}
+.card-body h3 a{color:inherit}
+.card-body h3 a:hover{color:var(--brand);text-decoration:none}
+.card-desc{font-size:13px;color:var(--ink-3);line-height:1.62;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;color:var(--brand);background:var(--brand-soft);border-radius:5px;padding:1px 7px}
+.tag.warm{color:var(--accent);background:var(--accent-soft)}
+.tag.ok{color:var(--green);background:var(--green-soft)}
+.card-meta{display:flex;justify-content:space-between;font-size:12px;color:#93a1b0;border-top:1px dashed var(--line-2);padding-top:8px}
+.card-meta b{color:var(--accent);font-weight:700}
+
+/* 更新流 */
+.feed{list-style:none;margin:0;padding:0}
+.feed li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line-2);font-size:14px;align-items:flex-start}
+.feed li:last-child{border-bottom:0}
+.feed .t{flex:0 0 74px;font-size:12px;color:#93a1b0;line-height:1.9}
+.feed .n{font-weight:600;color:var(--ink);flex:0 0 auto}
+.feed .n a{color:inherit}
+.feed .n a:hover{color:var(--brand)}
+.feed .dot{color:#c9d5e1}
+.feed .s{color:var(--ink-3);font-size:13px;flex:1;min-width:0}
+.feed .st{flex:0 0 auto;font-size:11.5px;border-radius:4px;padding:0 6px;line-height:19px;background:#f2f6fa;color:var(--ink-3)}
+.feed .st.new{background:var(--green-soft);color:var(--green)}
+.feed .st.hot{background:var(--accent-soft);color:var(--accent)}
+
+/* 分类 */
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat{
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 12px;background:#fcfdff;
+  display:flex;flex-direction:column;gap:3px;
+}
+.cat b{font-size:14px;color:var(--ink)}
+.cat span{font-size:12px;color:var(--ink-3);line-height:1.55}
+.cat:hover{border-color:#c8dbe9;background:#fff}
+
+/* 深度解析 */
+.deep h3{font-size:16.5px;color:#123c58;margin:18px 0 8px;padding-left:10px;border-left:3px solid var(--brand-2)}
+.deep h3:first-of-type{margin-top:4px}
+.deep p{color:var(--ink-2);font-size:14.6px}
+.deep ul{color:var(--ink-2);font-size:14.4px}
+.deep li b{color:var(--ink)}
+.cmp{width:100%;border-collapse:collapse;font-size:13.6px;margin:10px 0 16px;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.cmp th,.cmp td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line-2);vertical-align:top}
+.cmp thead th{background:#f2f7fb;color:var(--brand);font-size:13px;white-space:nowrap}
+.cmp tbody tr:last-child td{border-bottom:0}
+.cmp td b{color:var(--ink)}
+.quote{
+  border-left:3px solid var(--accent);background:#fdf8f3;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:12px 16px;margin:14px 0;font-size:14px;color:#6b4a2c;
+}
+.quote cite{display:block;font-style:normal;font-size:12.5px;color:#a07b57;margin-top:6px}
+
+/* 步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:s;position:relative;padding:12px 14px 12px 46px;border:1px solid var(--line);
+  border-radius:var(--radius-sm);background:#fcfdff;font-size:14px;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:13px;top:12px;width:22px;height:22px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:12.5px;font-weight:700;display:grid;place-items:center;
+}
+.steps li b{color:var(--ink)}
+
+/* FAQ */
+details.faq{border:1px solid var(--line);border-radius:var(--radius-sm);padding:0;margin-bottom:10px;background:#fff;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:11px 15px;font-size:14.5px;font-weight:600;color:var(--ink);list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;background:#fbfdff;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--brand-2);font-weight:700;font-size:17px;line-height:1}
+details.faq[open] summary::after{content:"–"}
+details.faq[open] summary{background:var(--brand-soft);color:var(--brand)}
+details.faq .ans{padding:11px 15px 13px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--line-2)}
+
+/* 评论 */
+.cmts{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:12px}
+.cmt{border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 13px;background:#fcfdff}
+.cmt-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.ava{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;flex:0 0 auto}
+.cmt-head b{font-size:13px;color:var(--ink)}
+.cmt-head span{font-size:11.5px;color:#9aa8b6;margin-left:auto}
+.cmt p{font-size:13.2px;color:var(--ink-2);margin:0;line-height:1.65}
+.cmt .ref{display:inline-block;font-size:11.5px;color:var(--brand);background:var(--brand-soft);border-radius:4px;padding:0 6px;margin-top:7px}
+
+/* 资讯 */
+.news{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.news li{display:flex;gap:14px;border-bottom:1px dashed var(--line-2);padding-bottom:12px}
+.news li:last-child{border-bottom:0;padding-bottom:0}
+.news img{width:132px;height:88px;object-fit:cover;border-radius:var(--radius-sm);flex:0 0 auto}
+.news .nbody{min-width:0}
+.news h3{font-size:14.8px;color:var(--ink);margin-bottom:3px}
+.news h3 a{color:inherit}
+.news h3 a:hover{color:var(--brand)}
+.news .nd{font-size:11.5px;color:#93a1b0;margin-bottom:3px;letter-spacing:.3px}
+.news p{font-size:13.2px;color:var(--ink-3);margin:0;line-height:1.62}
+
+/* 推荐标签索引 */
+.tagidx{display:flex;flex-wrap:wrap;gap:9px}
+.tagidx a{
+  border:1px solid #d7e4ef;background:#fbfdff;border-radius:999px;padding:4px 13px;font-size:13px;color:var(--ink-2);
+}
+.tagidx a:hover{background:var(--brand-soft);color:var(--brand);border-color:#bfd8ea;text-decoration:none}
+.tagidx a small{color:#9aa8b6;font-size:11px;margin-left:5px}
+
+/* 时间线 */
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid #e2ebf3}
+.tl li{position:relative;padding:0 0 16px 6px}
+.tl li::before{content:"";position:absolute;left:-25px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--brand-2);border:2px solid #fff;box-shadow:0 0 0 2px #dceaf4}
+.tl .d{font-size:12px;color:#93a1b0}
+.tl b{font-size:14px;color:var(--ink);display:block;margin:1px 0 2px}
+.tl p{font-size:13.2px;color:var(--ink-3);margin:0}
+
+/* 无结果 */
+.noresult{display:none;padding:14px;border:1px dashed #d7c2ae;background:#fdf7f1;border-radius:var(--radius-sm);color:#8a5d31;font-size:13.5px}
+.noresult.show{display:block}
+.searchable.hide{display:none!important}
+
+/* ===== 页尾 ===== */
+footer.sitefoot{
+  margin-top:28px;background:#123c58;color:#c8dbe9;font-size:13.5px;
+}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:34px 20px 18px}
+.foot-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:26px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.14)}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:34px;height:34px}
+.foot-brand b{font-size:17px;color:#fff;letter-spacing:.6px}
+.foot-desc{font-size:13px;line-height:1.75;color:#a7c2d6;max-width:30em}
+.foot-col h4{font-size:13px;color:#fff;letter-spacing:1px;margin-bottom:9px}
+.foot-col a{display:block;color:#a7c2d6;font-size:13px;padding:2px 0}
+.foot-col a:hover{color:#fff;text-decoration:none}
+.foot-bot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:14px;font-size:12px;color:#7f9db4}
+.foot-bot .dis{max-width:56em;line-height:1.8}
+.toTop{
+  position:fixed;right:18px;bottom:20px;width:42px;height:42px;border-radius:50%;border:1px solid #cfe0ee;
+  background:#fff;color:var(--brand);font-size:16px;cursor:pointer;box-shadow:var(--shadow);display:none;z-index:40;
+}
+.toTop.show{display:block}
+
+/* 登录弹层 */
+.modal{position:fixed;inset:0;background:rgba(18,36,52,.48);display:none;z-index:80;padding:20px;overflow:auto}
+.modal.open{display:flex;align-items:flex-start;justify-content:center}
+.modal-box{background:#fff;border-radius:14px;max-width:388px;width:100%;margin:8vh auto 0;box-shadow:0 24px 60px rgba(18,36,52,.3);overflow:hidden}
+.modal-head{padding:16px 20px 12px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:10px}
+.modal-head b{font-size:16px;color:#123c58}
+.modal-head button{margin-left:auto;background:none;border:0;font-size:19px;color:#8fa2b3;cursor:pointer;line-height:1}
+.modal-body{padding:16px 20px 20px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:13px;color:var(--ink-2);margin-bottom:4px;font-weight:600}
+.field input{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fbfcfe}
+.field input:focus{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 3px rgba(47,127,181,.13);background:#fff}
+.modal-note{font-size:12px;color:var(--ink-3);line-height:1.7;margin-top:4px}
+.modal-msg{font-size:12.5px;color:var(--green);background:var(--green-soft);border-radius:6px;padding:7px 10px;margin-bottom:10px;display:none}
+.modal-msg.show{display:block}
+
+@media (max-width:1024px){
+  :root{--stick:98px}
+  .layout{grid-template-columns:minmax(0,1fr) 258px}
+  .side-left{display:none}
+  .hero-in{grid-template-columns:1fr;gap:24px}
+  .hero-art{max-width:440px}
+  .foot-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  :root{--stick:0px}
+  .stickwrap{position:static}
+  .layout{grid-template-columns:1fr}
+  .side-right{position:static}
+  .side-sticky{position:static}
+  .head-in{padding:9px 14px;gap:10px}
+  .nav{order:3;width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+  .nav a{white-space:nowrap;font-size:13.5px;padding:5px 10px}
+  .head-right{margin-left:auto}
+  .searchbox input{width:150px}
+  .btn-login{padding:7px 13px;font-size:13px}
+  .wrap{padding:18px 14px 8px}
+  .sec{padding:16px 14px 18px}
+  .hero-in{padding:26px 14px 24px}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+  .news li{flex-direction:column}
+  .news img{width:100%;height:150px}
+  .feed li{flex-wrap:wrap;gap:6px}
+  .feed .t{flex:0 0 100%}
+  .feed .s{flex:1 0 100%}
+  .foot-top{grid-template-columns:1fr}
+  .foot-bot{flex-direction:column}
+  .cmts{grid-template-columns:1fr}
+  .tagidx a{font-size:12.5px;padding:3px 11px}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="stickwrap">
+  <div class="topbar">
+    <div class="topbar-in">
+      <span class="pill">今日更新</span>
+      <span>2026-11-25 新增 12 条文献档案 · 中文期刊库扩容至 4.8 万种</span>
+      <div class="tb-list">
+        <span>11-24 论文查重规则调整公告</span>
+        <span>11-23 外文库镜像节点上线</span>
+        <span><a href="/#news">查看全部更新</a></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sitehead">
+    <div class="head-in">
+      <a class="brand" href="/#top" aria-label="文献小镇首页">
+        <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-label="文献小镇图形标志：三本叠放的书与屋顶轮廓">
+          <rect x="2" y="2" width="44" height="44" rx="11" fill="#1f5f8b"/>
+          <path d="M10 30 L24 15 L38 30" fill="none" stroke="#9fd0ec" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="14" y="29" width="20" height="4" rx="1.4" fill="#eaf3fa"/>
+          <rect x="16" y="35" width="16" height="3.4" rx="1.2" fill="#9fd0ec"/>
+          <rect x="24" y="16" width="2.2" height="12" rx="1" fill="#c96a2b"/>
+        </svg>
+        <span class="brand-txt">
+          <span class="brand-name">文献小镇</span>
+          <span class="brand-sub">LITERATURE TOWN</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="/#overview">小镇概览</a>
+        <a href="/#picks">资源精选</a>
+        <a href="/#feed">今日更新</a>
+        <a href="/#cats">分类目录</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">检索指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">读者评论</a>
+        <a href="/#news">小镇资讯</a>
+      </nav>
+      <div class="head-right">
+        <div class="searchbox">
+          <input id="q" type="search" placeholder="搜索条目 / 期刊 / 分类" aria-label="站内搜索文献条目、期刊或分类">
+          <button id="qbtn" type="button" aria-label="执行搜索">🔍</button>
+        </div>
+        <button class="btn-login" id="openLogin" type="button">登录入口</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="h1title">
+    <div class="hero-in">
+      <div>
+        <span class="hero-kicker"><i></i>高校科研与文献检索服务平台 · 账号统一入口</span>
+        <h1 id="h1title">文献小镇登录入口</h1>
+        <p class="hero-desc">从这一页进入文献小镇账号登录，同时可以查中文期刊库、外文镜像库、学位论文库与文献管理工具的具体入口说明。首次使用可先看登录前的准备清单，再按检索指南挑选第一批要读的文献。</p>
+        <div class="hero-actions">
+          <button class="cta-main" id="heroLogin" type="button">进入账号登录</button>
+          <a class="cta-sub" href="/#guide">查看检索指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4.8 万</b>中文期刊收录</div>
+          <div><b>12 条</b>今日新增档案</div>
+          <div><b>37 个</b>学科分类入口</div>
+          <div><b>6 类</b>文献管理工具</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 460 330" role="presentation">
+          <defs>
+            <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eaf3fb"/><stop offset="1" stop-color="#cfe4f3"/>
+            </linearGradient>
+            <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1f5f8b"/><stop offset="1" stop-color="#123c58"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="10" width="444" height="310" rx="18" fill="url(#gA)"/>
+          <circle cx="368" cy="66" r="40" fill="#ffffff" opacity=".55"/>
+          <circle cx="368" cy="66" r="26" fill="#c96a2b" opacity=".18"/>
+          <rect x="42" y="52" width="212" height="150" rx="10" fill="#fff" stroke="#cfe0ee"/>
+          <rect x="56" y="68" width="76" height="10" rx="5" fill="#1f5f8b"/>
+          <rect x="56" y="88" width="168" height="7" rx="3.5" fill="#d7e4ef"/>
+          <rect x="56" y="102" width="140" height="7" rx="3.5" fill="#d7e4ef"/>
+          <rect x="56" y="122" width="34" height="20" rx="5" fill="#e7f1f8"/>
+          <rect x="96" y="122" width="34" height="20" rx="5" fill="#e7f1f8"/>
+          <rect x="136" y="122" width="34" height="20" rx="5" fill="#fbeee3"/>
+          <rect x="56" y="152" width="168" height="34" rx="7" fill="#f2f7fb"/>
+          <rect x="66" y="161" width="60" height="6" rx="3" fill="#9db9cd"/>
+          <rect x="66" y="173" width="100" height="5" rx="2.5" fill="#d7e4ef"/>
+          <rect x="292" y="118" width="132" height="182" rx="10" fill="#fff" stroke="#cfe0ee"/>
+          <rect x="306" y="134" width="60" height="9" rx="4.5" fill="#c96a2b"/>
+          <rect x="306" y="152" width="104" height="6" rx="3" fill="#d7e4ef"/>
+          <rect x="306" y="166" width="88" height="6" rx="3" fill="#d7e4ef"/>
+          <rect x="306" y="184" width="104" height="46" rx="7" fill="#e7f1f8"/>
+          <path d="M312 222 L326 202 L338 214 L350 196 L364 222 Z" fill="#9fd0ec"/>
+          <rect x="306" y="242" width="104" height="6" rx="3" fill="#d7e4ef"/>
+          <rect x="306" y="256" width="72" height="6" rx="3" fill="#d7e4ef"/>
+          <rect x="306" y="272" width="50" height="18" rx="9" fill="#1f5f8b"/>
+          <path d="M42 262 L24 300 L120 300 L102 262 Z" fill="url(#gB)"/>
+          <path d="M120 262 L160 300 L244 300 L204 262 Z" fill="#2f7fb5"/>
+          <path d="M204 262 L244 300 L330 300 L290 262 Z" fill="#1f5f8b"/>
+          <rect x="60" y="272" width="26" height="8" rx="4" fill="#9fd0ec" opacity=".8"/>
+          <rect x="128" y="272" width="34" height="8" rx="4" fill="#d9ecf8" opacity=".8"/>
+          <rect x="216" y="272" width="30" height="8" rx="4" fill="#9fd0ec" opacity=".8"/>
+        </svg>
+        <div class="art-caption">文献小镇检索桌面 · 期刊库与个人书架的登录后视图示意</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 左侧频道 -->
+      <aside class="side-left" aria-label="频道索引">
+        <div class="panel side-sticky">
+          <div class="side-title">频道索引</div>
+          <ul class="chan-list">
+            <li><a href="/#overview">小镇概览<span class="cnt">01</span></a></li>
+            <li><a href="/#picks">资源精选<span class="cnt">12</span></a></li>
+            <li><a href="/#feed">今日更新<span class="cnt">10</span></a></li>
+            <li><a href="/#cats">分类目录<span class="cnt">08</span></a></li>
+            <li><a href="/#deep">深度解析<span class="cnt">04</span></a></li>
+            <li><a href="/#guide">检索指南<span class="cnt">05</span></a></li>
+            <li><a href="/#faq">常见问题<span class="cnt">06</span></a></li>
+            <li><a href="/#comments">读者评论<span class="cnt">16</span></a></li>
+            <li><a href="/#news">小镇资讯<span class="cnt">06</span></a></li>
+            <li><a href="/#relate">相关推荐<span class="cnt">08</span></a></li>
+            <li><a href="/#timeline">档案时间线<span class="cnt">06</span></a></li>
+            <li><a href="/#rank">热度榜单<span class="cnt">06</span></a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 中部主内容 -->
+      <div class="main">
+
+        <!-- 1 概览 -->
+        <section class="panel sec overview anchor" id="overview">
+          <div class="sec-head">
+            <h2>小镇概览：这个平台收录哪些文献方向</h2>
+            <span class="h2tag">领域说明</span>
+          </div>
+          <p>文献小镇是一个面向高校学生、科研人员与中学教师的文献检索与阅读服务平台，账号登录后可以使用中文期刊库、外文镜像库、学位论文库、会议论文库与个人文献书架五个核心模块。中文期刊库目前收录 4.8 万种连续出版物，覆盖自然科学、工程技术、医药卫生、人文社科与教育研究；外文镜像库以学科包形式开放，常见的是 Elsevier、Springer、Wiley 三类镜像节点，登录后按机构授权显示可下载范围。</p>
+          <p>学位论文库以硕博论文为主，按学校与学科双维度编排，支持按导师姓名、答辩年份和关键词组合筛选。会议论文库偏向计算机、材料、医学与教育学四类学科的年会与专题研讨会，更新频率高于期刊，但同行评议周期更短，阅读时需要自己判断证据强度。个人文献书架支持题录导入、标签分组与引用格式导出，常用的 GB/T 7714 与 APA 第七版都在格式列表里。</p>
+          <p>平台近期值得关注的方向有三类：一是开放获取（OA）期刊的收录比例上升，2026 年 11 月起新增 214 种完全 OA 刊；二是预印本条目开始与正式发表版本做关联标注，方便判断一篇论文是否已经过同行评议；三是文献管理工具增加了“相似条目去重”功能，对同一篇论文在不同数据库的重复题录可以合并处理。</p>
+          <div class="kv">
+            <span>中文期刊库</span><span>外文镜像库</span><span>学位论文库</span><span>会议论文库</span><span>个人文献书架</span><span>引文格式导出</span>
+          </div>
+        </section>
+
+        <!-- 2 精选 -->
+        <section class="panel sec anchor" id="picks">
+          <div class="sec-head">
+            <h2>资源精选：值得先登录查阅的文献条目</h2>
+            <span class="h2tag">12 条</span>
+            <span class="more">按近 30 天访问量排序</span>
+          </div>
+          <p class="sec-lead">以下条目均在 2026 年 11 月内更新或入库，登录后可直接查看题录、摘要与全文获取方式。</p>
+          <div class="cards" id="pickCards">
+
+            <article class="card searchable" data-key="深度学习 医学影像 期刊 综述">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-deepmed21/400/300" width="400" height="300" loading="lazy" alt="深度学习医学影像分割综述期刊封面">
+                <span class="badge">期刊论文</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">深度学习在医学影像分割中的迁移学习综述</a></h3>
+                <p class="card-desc">系统梳理 2019—2026 年间 148 篇迁移学习用于影像分割的研究，附数据集对照表与常用评价指标说明，适合做开题综述时直接引用。</p>
+                <div class="tags"><span class="tag">医学影像</span><span class="tag">迁移学习</span><span class="tag warm">综述</span></div>
+                <div class="card-meta"><span>更新 11-22</span><span>被引 <b>316</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="学位论文 城市更新 社区 空间">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-urban07/400/300" width="400" height="300" loading="lazy" alt="城市更新社区空间学位论文封面">
+                <span class="badge">学位论文</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">城市更新背景下老旧社区公共空间改造路径研究</a></h3>
+                <p class="card-desc">以三个地级市 11 个社区为样本，给出改造优先级评价量表，问卷与访谈提纲在附录中公开，做同类调研可以直接借用。</p>
+                <div class="tags"><span class="tag">城市更新</span><span class="tag">社区空间</span><span class="tag ok">附录完整</span></div>
+                <div class="card-meta"><span>答辩 2026-11-18</span><span>下载 <b>1.2 万</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="会议论文 钙钛矿 太阳能电池 稳定性">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-perov33/400/300" width="400" height="300" loading="lazy" alt="钙钛矿太阳能电池稳定性会议论文配图">
+                <span class="badge">会议论文</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">钙钛矿太阳能电池封装工艺与长期稳定性报告</a></h3>
+                <p class="card-desc">2026 年材料学年会专题报告，包含 1200 小时湿热老化实验数据与三种封装方案成本对比，图表可按原始数据导出。</p>
+                <div class="tags"><span class="tag">钙钛矿</span><span class="tag">封装工艺</span><span class="tag">稳定性</span></div>
+                <div class="card-meta"><span>会议 11-14</span><span>浏览 <b>8934</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="中文期刊 语文 阅读教学 实证">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-yuwen15/400/300" width="400" height="300" loading="lazy" alt="中学语文整本书阅读教学实证研究期刊封面">
+                <span class="badge">中文期刊</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">中学语文整本书阅读教学的课堂实证研究</a></h3>
+                <p class="card-desc">对 8 所中学 26 个班级的阅读课进行观察记录，提出“任务单—讨论课—写作输出”三段式设计，附完整任务单模板。</p>
+                <div class="tags"><span class="tag">语文教学</span><span class="tag">整本书阅读</span><span class="tag warm">课堂实证</span></div>
+                <div class="card-meta"><span>刊期 11 月刊</span><span>被引 <b>87</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="外文镜像 供应链 韧性 制造业">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-supply28/400/300" width="400" height="300" loading="lazy" alt="制造业供应链韧性外文期刊论文配图">
+                <span class="badge">外文镜像</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">制造业供应链韧性的测度框架与跨国比较</a></h3>
+                <p class="card-desc">建立四维度韧性指数，覆盖 17 个国家的制造业面板数据，方法部分对指标赋权有详细说明，适合做方法论模仿。</p>
+                <div class="tags"><span class="tag">供应链韧性</span><span class="tag">测度框架</span><span class="tag">面板数据</span></div>
+                <div class="card-meta"><span>上线 11-19</span><span>影响因子 <b>6.4</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="预印本 大模型 代码生成 评测">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-llmcode42/400/300" width="400" height="300" loading="lazy" alt="大模型代码生成能力评测预印本配图">
+                <span class="badge">预印本</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">大模型代码生成能力的可复现评测方案</a></h3>
+                <p class="card-desc">公开 6 个评测集的清洗脚本与提示词模板，指出常见评测中测试集泄漏问题，并给出修正后的分数对照。</p>
+                <div class="tags"><span class="tag">代码生成</span><span class="tag">可复现评测</span><span class="tag ok">脚本开源</span></div>
+                <div class="card-meta"><span>提交 11-21</span><span>评论 <b>64</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="档案 地方志 数字化 城市史">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-difangzhi09/400/300" width="400" height="300" loading="lazy" alt="地方志数字化档案封面">
+                <span class="badge">特色档案</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">近代地方志数字化整理与地名索引编制</a></h3>
+                <p class="card-desc">收录 1930—1949 年间 62 种县志的扫描件与可检索文本，附地名异写对照表，做城市史与人口史研究时检索效率提升明显。</p>
+                <div class="tags"><span class="tag">地方志</span><span class="tag">地名索引</span><span class="tag warm">全文可检索</span></div>
+                <div class="card-meta"><span>解封 11-10</span><span>条目 <b>62 种</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="临床 指南 高血压 管理">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-hypertension17/400/300" width="400" height="300" loading="lazy" alt="高血压基层管理临床指南文档封面">
+                <span class="badge">临床指南</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">基层高血压规范化管理指南（2026 修订版）</a></h3>
+                <p class="card-desc">给出随访频次、用药阶梯与转诊指征的具体数值，附一页式患者教育材料，社区卫生服务中心可直接打印使用。</p>
+                <div class="tags"><span class="tag">高血压</span><span class="tag">基层管理</span><span class="tag ok">可打印</span></div>
+                <div class="card-meta"><span>发布 11-08</span><span>下载 <b>3.6 万</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="数据论文 遥感 土地利用 数据集">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-remote11/400/300" width="400" height="300" loading="lazy" alt="遥感土地利用数据集数据论文配图">
+                <span class="badge">数据论文</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">2015—2025 年县域土地利用遥感数据集</a></h3>
+                <p class="card-desc">提供 30 米分辨率逐年分类栅格与精度验证报告，元数据按都柏林核心标准填写，适合作为区域研究的底图来源。</p>
+                <div class="tags"><span class="tag">遥感数据</span><span class="tag">土地利用</span><span class="tag">元数据规范</span></div>
+                <div class="card-meta"><span>更新 11-16</span><span>引用 <b>204</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="工具 文献管理 题录 去重">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-refmg25/400/300" width="400" height="300" loading="lazy" alt="文献管理工具题录去重功能截图">
+                <span class="badge">工具说明</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">文献管理工具的题录去重与合并规则</a></h3>
+                <p class="card-desc">说明 DOI 匹配、标题相似度与作者姓名归一化三种判重逻辑，并列出合并后字段优先级，避免引文信息被错误覆盖。</p>
+                <div class="tags"><span class="tag">题录去重</span><span class="tag">DOI 匹配</span><span class="tag">字段优先级</span></div>
+                <div class="card-meta"><span>更新 11-23</span><span>版本 <b>v4.2</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="教育 双减 作业设计 政策">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-zuoye13/400/300" width="400" height="300" loading="lazy" alt="作业设计政策文本分析论文配图">
+                <span class="badge">政策研究</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">义务教育作业设计政策的文本分析与实施差异</a></h3>
+                <p class="card-desc">对 24 个省级实施方案做编码分析，比较作业时长、分层设计与公示制度三方面的落地差异，附编码表。</p>
+                <div class="tags"><span class="tag">作业设计</span><span class="tag">政策文本</span><span class="tag">编码分析</span></div>
+                <div class="card-meta"><span>刊期 11 月</span><span>被引 <b>52</b></span></div>
+              </div>
+            </article>
+
+            <article class="card searchable" data-key="古籍 影印 目录 版本">
+              <figure>
+                <img src="https://picsum.photos/seed/wenxian-guji05/400/300" width="400" height="300" loading="lazy" alt="古籍影印本目录与版本对照封面">
+                <span class="badge">古籍库</span>
+              </figure>
+              <div class="card-body">
+                <h3><a href="/#picks">馆藏古籍影印本目录与版本对照表</a></h3>
+                <p class="card-desc">按经史子集编排，标注影印所据底本、藏地与残缺卷次，是核对引文版本时最省时间的一份对照材料。</p>
+                <div class="tags"><span class="tag">古籍影印</span><span class="tag">版本对照</span><span class="tag warm">底本标注</span></div>
+                <div class="card-meta"><span>更新 11-06</span><span>条目 <b>1.8 万</b></span></div>
+              </div>
+            </article>
+
+          </div>
+          <p class="noresult" id="noresult">没有匹配到条目，试试“期刊”“学位论文”“指南”或具体学科名。</p>
+        </section>
+
+        <!-- 3 更新 -->
+        <section class="panel sec anchor" id="feed">
+          <div class="sec-head">
+            <h2>今日更新与动态</h2>
+            <span class="h2tag">2026-11-25</span>
+            <span class="more">共 10 条</span>
+          </div>
+          <ul class="feed">
+            <li><span class="t">今天 09:30</span><span class="n"><a href="/#picks">深度学习医学影像综述</a></span><span class="dot">·</span><span class="s">补充 2026 年新增的 9 篇对照实验文献</span><span class="st new">已更新</span></li>
+            <li><span class="t">今天 08:50</span><span class="n"><a href="/#cats">中文期刊库</a></span><span class="dot">·</span><span class="s">新增 214 种完全开放获取期刊，可按 OA 状态筛选</span><span class="st new">新入库</span></li>
+            <li><span class="t">今天 08:10</span><span class="n"><a href="/#news">查重规则</a></span><span class="dot">·</span><span class="s">论文查重系统调整连续 13 字重复判定阈值说明</span><span class="st hot">规则变更</span></li>
+            <li><span class="t">昨天 21:10</span><span class="n"><a href="/#picks">基层高血压管理指南</a></span><span class="dot">·</span><span class="s">上线一页式患者教育材料打印版</span><span class="st">新增附件</span></li>
+            <li><span class="t">昨天 17:40</span><span class="n"><a href="/#cats">外文镜像库</a></span><span class="dot">·</span><span class="s">Springer 镜像节点切换至新 IP，登录后需重新授权</span><span class="st hot">需重新授权</span></li>
+            <li><span class="t">昨天 15:05</span><span class="n"><a href="/#picks">地方志数字化档案</a></span><span class="dot">·</span><span class="s">新增 7 种县志的全文可检索文本</span><span class="st new">已解封</span></li>
+            <li><span class="t">11-23 11:20</span><span class="n"><a href="/#picks">题录去重规则</a></span><span class="dot">·</span><span class="s">合并逻辑升级到 v4.2，作者姓名归一化支持中英混排</span><span class="st">版本升级</span></li>
+            <li><span class="t">11-22 16:00</span><span class="n"><a href="/#picks">县域土地利用数据集</a></span><span class="dot">·</span><span class="s">补充 2025 年度精度验证报告</span><span class="st new">已更新</span></li>
+            <li><span class="t">11-21 10:30</span><span class="n"><a href="/#picks">大模型代码生成评测预印本</a></span><span class="dot">·</span><span class="s">作者上传修正版，替换了泄漏的测试集</span><span class="st">修订版</span></li>
+            <li><span class="t">11-19 14:15</span><span class="n"><a href="/#cats">学位论文库</a></span><span class="dot">·</span><span class="s">新增按导师姓名与答辩年份的组合筛选</span><span class="st new">功能上线</span></li>
+          </ul>
+        </section>
+
+        <!-- 4 分类 -->
+        <section class="panel sec anchor" id="cats">
+          <div class="sec-head">
+            <h2>分类目录：八个常用检索入口</h2>
+            <span class="h2tag">按学科与文献类型</span>
+          </div>
+          <p class="sec-lead">登录后从下列分类进入，可继续按年份、语种与获取方式二次筛选。</p>
+          <div class="catgrid">
+            <a class="cat" href="/#picks"><b>中文期刊</b><span>4.8 万种连续出版物，含 214 种新增 OA 刊</span></a>
+            <a class="cat" href="/#picks"><b>外文镜像</b><span>Elsevier、Springer、Wiley 三类学科包</span></a>
+            <a class="cat" href="/#picks"><b>学位论文</b><span>硕博论文，按学校与学科双维度编排</span></a>
+            <a class="cat" href="/#picks"><b>会议论文</b><span>计算机、材料、医学、教育学四类年会</span></a>
+            <a class="cat" href="/#picks"><b>预印本</b><span>与正式发表版本做关联标注，便于判断评议状态</span></a>
+            <a class="cat" href="/#picks"><b>临床指南</b><span>诊疗规范与基层管理方案，含可打印附件</span></a>
+            <a class="cat" href="/#picks"><b>特色档案</b><span>地方志、古籍影印与近现代史料</span></a>
+            <a class="cat" href="/#picks"><b>数据论文</b><span>遥感、气象与统计数据集及元数据说明</span></a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section class="panel sec deep anchor" id="deep">
+          <div class="sec-head">
+            <h2>深度解析：期刊、学位论文与预印本该怎么分辨着读</h2>
+            <span class="h2tag">约 800 字</span>
+          </div>
+
+          <h3>三类文献的定位差别</h3>
+          <p>登录文献小镇之后最先遇到的困惑通常不是“搜不到”，而是“搜到太多”。同一主题下会同时出现期刊论文、学位论文和预印本，三者的写作目的并不一样。期刊论文面向同行，篇幅受版面限制，方法部分往往压缩，需要结合补充材料一起读；学位论文面向答辩委员会，为了证明作者的系统训练，通常会把文献综述、研究设计和附录写得很完整，是入门一个新方向时信息密度最高的材料；预印本面向快速交流，时效性最强，但评议状态不确定，适合用来了解最新动向，不宜直接当作定论引用。</p>
+
+          <h3>判断一篇文献值不值得投入时间的四个维度</h3>
+          <ul>
+            <li><b>证据来源是否交代清楚。</b>看样本量、数据采集时间与来源机构，只写“某地调研”而不说样本构成的，通常可参考价值有限。</li>
+            <li><b>方法能否被复现。</b>有公开代码、问卷、量表或参数设置的条目优先，尤其是数据论文与计算机方向会议论文。</li>
+            <li><b>结论与数据的跨度。</b>如果样本是 3 所学校的问卷，结论却写成“全国普遍现象”，引用时需要自行降级表述。</li>
+            <li><b>版本状态。</b>预印本要看是否已关联正式发表版本，已发表的优先引用发表版，避免页码与结论不一致。</li>
+          </ul>
+
+          <h3>期刊论文与学位论文的实际取舍</h3>
+          <table class="cmp">
+            <thead>
+              <tr><th>比较项</th><th>期刊论文</th><th>学位论文</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>综述完整度</td><td>通常只保留与研究问题直接相关的部分</td><td>综述章节完整，适合补基础</td></tr>
+              <tr><td>方法细节</td><td>受版面限制，常移至补充材料</td><td>步骤、问卷、访谈提纲多在附录</td></tr>
+              <tr><td>时效性</td><td>审稿周期数月到一年不等</td><td>答辩后入库，通常滞后半年以上</td></tr>
+              <tr><td>引用场景</td><td>引用具体结论与方法</td><td>借用研究框架、量表与调研设计</td></tr>
+            </tbody>
+          </table>
+          <p>比较实用的顺序是：先用学位论文补齐概念与量表，再用近三年的期刊论文确认结论是否被修正，最后用预印本看有没有更新的方向。反过来做，容易被最新但未经验证的说法带走。</p>
+
+          <h3>开放获取与镜像授权的区别</h3>
+          <p>中文期刊库中标注为完全开放获取的条目，登录后可以直接下载全文，不受机构授权限制；外文镜像库则不同，能否下载取决于所属机构购买的学科包。同一篇外文文献，在 A 单位可以下载，在 B 单位可能只显示题录与摘要。遇到只有题录的情况，可以先看是否有作者自存档版本或预印本版本，再考虑文献传递。这个判断过程比反复刷新页面更省时间。</p>
+          <div class="quote">
+            “开题阶段我把同一主题的 3 篇学位论文综述和 11 篇近三年期刊论文对照读，发现两篇期刊论文的结论其实被后来的大样本研究修正过，如果只看最新发表时间排序，很容易漏掉这一层。”
+            <cite>—— 读者 沈砚舟，教育学方向，2026-11-20 留言</cite>
+          </div>
+
+          <h3>检索词的收与放</h3>
+          <p>中文期刊库对同义词的扩展有限，检索“整本书阅读”不一定命中写“整书阅读”的条目，建议准备两到三组近义表达交替使用；外文镜像库则更适合用布尔逻辑组合主题词与研究方法词，例如把研究对象词与“systematic review”“longitudinal”这类方法词并列，能有效压缩结果数量。学位论文库支持按导师姓名检索，在确定研究方向后，顺着高产导师的指导学生论文往下读，往往比漫无目的的关键词搜索更快建立领域地图。</p>
+        </section>
+
+        <!-- 6 指南 -->
+        <section class="panel sec anchor" id="guide">
+          <div class="sec-head">
+            <h2>检索指南：从登录到读完第一篇的顺序</h2>
+            <span class="h2tag">五步</span>
+          </div>
+          <p class="sec-lead">第一次使用的读者按下面顺序走，可以避免在登录环节和检索结果页之间反复切换。</p>
+          <ol class="steps">
+            <li><b>先确认账号类型。</b>机构账号用学校统一认证登录，个人账号用手机号注册；机构账号的镜像库权限更完整，个人账号以中文期刊与开放获取资源为主。</li>
+            <li><b>登录后先看授权范围。</b>在账号信息页确认已开通的学科包与可下载库，避免在检索结果里反复遇到“无权限”。</li>
+            <li><b>用一个具体问题做首次检索。</b>不要一上来搜大词，先用你论文里的一个具体变量或案例名检索，看看返回条目的相关度。</li>
+            <li><b>按文献类型分堆。</b>把结果分成综述、实证、方法、数据四类，综述用来建框架，实证用来找证据，方法用来定工具，数据用来做复现。</li>
+            <li><b>导入书架并标注状态。</b>题录导入后立刻标“已读摘要”“待读全文”“已引用”，一周后回看时能省掉大量重复判断。</li>
+          </ol>
+        </section>
+
+        <!-- 7 FAQ -->
+        <section class="panel sec anchor" id="faq">
+          <div class="sec-head">
+            <h2>常见问题</h2>
+            <span class="h2tag">6 问</span>
+          </div>
+
+          <details class="faq">
+            <summary>文献小镇登录入口打不开，一般是什么原因？</summary>
+            <div class="ans">最常见的是机构网络限制：校园网外的访问需要先连学校 VPN，再走统一认证。其次是浏览器缓存导致的跳转循环，可尝试清缓存或用无痕窗口。若页面能打开但登录后提示无权限，多半是账号所属机构未开通对应学科包，与登录入口本身无关。</div>
+          </details>
+
+          <details class="faq">
+            <summary>机构账号和个人账号登录后能用的资源有什么区别？</summary>
+            <div class="ans">机构账号可访问本单位购买的学科包，外文镜像库的下载权限更完整，部分单位还开放文献传递额度；个人账号以中文期刊库、开放获取期刊和公开数据集为主，外文资源通常只能看到题录与摘要。如果只是查中文期刊和学位论文，个人账号已经够用。</div>
+          </details>
+
+          <details class="faq">
+            <summary>同一篇论文在期刊库和预印本库都有，引用哪个版本？</summary>
+            <div class="ans">优先引用正式发表版本，因为页码、卷期和结论都经过同行评议确认。预印本适合了解研究进展和补充细节，引用时需标注预印本状态与提交日期。如果两者结论有出入，以发表版为准，并在正文中说明差异。</div>
+          </details>
+
+          <details class="faq">
+            <summary>中文期刊库的更新频率是怎样的？</summary>
+            <div class="ans">网络首发条目通常每周更新两到三次，纸质刊期上线滞后约一到两个月，整刊回溯补齐按季度批量处理。开放获取期刊的入库速度更快，多为发布后一周内可检索。若发现某刊长期未更新，可先核对刊名异写。</div>
+          </details>
+
+          <details class="faq">
+            <summary>第一次做文献综述，从哪类材料开始读比较好？</summary>
+            <div class="ans">建议先读两到三篇近三年的学位论文综述章节，建立概念与流派框架；再读同主题的期刊综述，确认哪些结论已被更新；最后用具体实证论文验证细节。直接从最新单篇论文读起，容易只看到一个局部结论，难以判断它在领域中的位置。</div>
+          </details>
+
+          <details class="faq">
+            <summary>文献管理工具的题录去重会不会把不同文献合并掉？</summary>
+            <div class="ans">去重主要依据 DOI 精确匹配、标题相似度与作者姓名归一化三层判断，DOI 不同但标题高度相似的条目会进入人工确认队列，不会自动合并。合并时的字段优先级依次为 DOI、正式发表卷期、作者全名、摘要。建议合并前先备份书架，并抽查被合并条目的年份与页码。</div>
+          </details>
+        </section>
+
+        <!-- 8 评论 -->
+        <section class="panel sec anchor" id="comments">
+          <div class="sec-head">
+            <h2>读者评论</h2>
+            <span class="h2tag">16 条</span>
+            <span class="more">2026-10-28 至 2026-11-25</span>
+          </div>
+          <div class="cmts">
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2f7fb5">沈</span><b>沈砚舟</b><span>11-25</span></div><p>拿它查整本书阅读的课堂实证，任务单模板比我之前找的三份都完整，直接改成自己的班级版本用了。</p><span class="ref">中学语文整本书阅读教学</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#c96a2b">柳</span><b>柳栖迟</b><span>11-24</span></div><p>镜像库授权这块解释得清楚。我之前一直以为是自己账号问题，其实是单位没买 Springer 那个包。</p><span class="ref">外文镜像库</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2c7a63">陆</span><b>陆知微</b><span>11-24</span></div><p>医学影像那篇综述的数据集对照表挺实用，省了我自己整理 20 多个公开数据集的功夫。</p><span class="ref">深度学习医学影像综述</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#5a6f9e">周</span><b>周砚白</b><span>11-23</span></div><p>去重功能升级之后中英混排的作者名终于能对上了，之前同一个作者在库里出现三种写法。</p><span class="ref">题录去重规则 v4.2</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#8a5d9e">许</span><b>许南枝</b><span>11-23</span></div><p>地方志的全文检索比想象中好用，地名异写对照表解决了我卡了很久的一个地名问题。</p><span class="ref">地方志数字化档案</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#b07a2c">何</span><b>何砚青</b><span>11-22</span></div><p>建议把查重规则的变更写得更直白一点，连续 13 字这个阈值改完，我们院好多人还在用旧说法。</p><span class="ref">论文查重规则</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2f7fb5">顾</span><b>顾长庚</b><span>11-21</span></div><p>钙钛矿那篇会议报告的封装成本对比做得细，但样本批次偏少，引用时最好补一句局限。</p><span class="ref">钙钛矿封装工艺</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2c7a63">程</span><b>程砚秋</b><span>11-20</span></div><p>高血压指南的一页式材料太适合社区了，打印出来给居民看，比讲十分钟都管用。</p><span class="ref">基层高血压管理指南</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#c96a2b">邵</span><b>邵听澜</b><span>11-19</span></div><p>大模型代码评测那篇预印本作者很坦诚，自己指出测试集泄漏并给了修正分数，这点值得学。</p><span class="ref">大模型代码生成评测</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#5a6f9e">罗</span><b>罗清晏</b><span>11-18</span></div><p>遥感数据集的元数据写得很规范，但分类精度验证只到 2024 年，做长时序分析要自己补一段。</p><span class="ref">县域土地利用数据集</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#8a5d9e">沈</span><b>沈听雪</b><span>11-17</span></div><p>作业设计政策那篇的编码表可以直接复用，不过省级差异部分建议配一张地图更直观。</p><span class="ref">作业设计政策文本分析</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#b07a2c">钱</span><b>钱砚林</b><span>11-15</span></div><p>供应链韧性那篇的赋权方法我没完全看懂，希望有人写个中文解读版。</p><span class="ref">制造业供应链韧性</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2f7fb5">孟</span><b>孟知远</b><span>11-14</span></div><p>按导师姓名检索这个功能上线得及时，我顺着导师带的学生论文一路读下去，快速摸清了领域脉络。</p><span class="ref">学位论文库筛选</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#2c7a63">叶</span><b>叶栖梧</b><span>11-12</span></div><p>古籍影印目录的底本标注很关键，引用时不用再一本本核对藏地，省了不少时间。</p><span class="ref">古籍影印本目录</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#c96a2b">韩</span><b>韩砚声</b><span>11-08</span></div><p>预印本和发表版做关联标注是个好方向，但有些条目关联错了，建议增加作者确认环节。</p><span class="ref">预印本关联标注</span></div>
+            <div class="cmt"><div class="cmt-head"><span class="ava" style="background:#5a6f9e">苏</span><b>苏长洲</b><span>11-03</span></div><p>整体用下来检索效率不错，就是外文库切节点后要重新授权这点有点烦，希望能记住授权状态。</p><span class="ref">外文镜像库节点切换</span></div>
+          </div>
+        </section>
+
+        <!-- 9 资讯 -->
+        <section class="panel sec anchor" id="news">
+          <div class="sec-head">
+            <h2>小镇资讯</h2>
+            <span class="h2tag">6 条</span>
+          </div>
+          <ul class="news">
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-oa23/600/400" width="600" height="400" loading="lazy" alt="开放获取期刊入库公告配图">
+              <div class="nbody">
+                <div class="nd">2026-11-25</div>
+                <h3><a href="/#news">中文期刊库新增 214 种完全开放获取期刊</a></h3>
+                <p>本次新增以医药卫生与教育学为主，入库后可按“OA 状态”直接筛选免费全文，不再需要逐刊核对授权。</p>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-check31/600/400" width="600" height="400" loading="lazy" alt="论文查重规则调整公告配图">
+              <div class="nbody">
+                <div class="nd">2026-11-24</div>
+                <h3><a href="/#news">论文查重系统调整连续 13 字重复判定说明</a></h3>
+                <p>新说明明确了引用标注、公式与表格文字的计入方式，多数高校将于 12 月起的送审批次按新口径执行。</p>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-springer44/600/400" width="600" height="400" loading="lazy" alt="Springer 镜像节点切换公告配图">
+              <div class="nbody">
+                <div class="nd">2026-11-24</div>
+                <h3><a href="/#news">Springer 镜像节点切换，登录后需重新授权</a></h3>
+                <p>原节点将于 11 月底下线，切换后机构账号首次访问需重新走统一认证，个人书架与检索历史不受影响。</p>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-preprint17/600/400" width="600" height="400" loading="lazy" alt="预印本与发表版关联标注功能配图">
+              <div class="nbody">
+                <div class="nd">2026-11-21</div>
+                <h3><a href="/#news">预印本条目开始与正式发表版本做关联标注</a></h3>
+                <p>首批覆盖计算机与材料两个学科共 3.2 万条记录，检索结果会同时显示预印本提交日期与发表卷期。</p>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-difangzhi12/600/400" width="600" height="400" loading="lazy" alt="地方志档案解封公告配图">
+              <div class="nbody">
+                <div class="nd">2026-11-10</div>
+                <h3><a href="/#news">62 种近代县志档案完成全文可检索整理</a></h3>
+                <p>整理内容包括扫描件与人工校对文本，并附地名异写对照表，城市史与人口史方向的检索效率明显提升。</p>
+              </div>
+            </li>
+            <li>
+              <img src="https://picsum.photos/seed/wenxian-news-tool08/600/400" width="600" height="400" loading="lazy" alt="文献管理工具去重功能升级配图">
+              <div class="nbody">
+                <div class="nd">2026-11-03</div>
+                <h3><a href="/#news">文献管理工具去重升级，支持中英混排作者名归一化</a></h3>
+                <p>v4.2 版本调整了合并字段优先级，被合并条目的年份与页码可在历史记录中回滚，建议升级前先备份书架。</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 10 相关推荐 -->
+        <section class="panel sec anchor" id="relate">
+          <div class="sec-head">
+            <h2>相关推荐：延伸检索方向</h2>
+            <span class="h2tag">8 个标签</span>
+          </div>
+          <p class="sec-lead">以下是与常用检索路径相邻的方向，适合在主线文献读完后横向扩展。</p>
+          <div class="tagidx">
+            <a href="/#picks">系统综述与元分析 <small>方法</small></a>
+            <a href="/#picks">量表编制与信效度检验 <small>工具</small></a>
+            <a href="/#picks">政策文本编码分析 <small>方法</small></a>
+            <a href="/#picks">纵向追踪数据 <small>数据</small></a>
+            <a href="/#picks">混合研究方法设计 <small>方法</small></a>
+            <a href="/#picks">古籍版本对勘 <small>特色</small></a>
+            <a href="/#picks">临床路径与转诊指征 <small>指南</small></a>
+            <a href="/#picks">数据论文元数据规范 <small>规范</small></a>
+          </div>
+        </section>
+
+        <!-- 11 时间线 -->
+        <section class="panel sec anchor" id="timeline">
+          <div class="sec-head">
+            <h2>档案时间线：近一个月的重要节点</h2>
+            <span class="h2tag">6 节点</span>
+          </div>
+          <ul class="tl">
+            <li><span class="d">2026-11-25</span><b>开放获取期刊批量入库</b><p>214 种完全 OA 刊上线，检索页新增 OA 状态筛选。</p></li>
+            <li><span class="d">2026-11-24</span><b>查重规则说明更新</b><p>明确引用标注、公式与表格文字的计入口径。</p></li>
+            <li><span class="d">2026-11-21</span><b>预印本与发表版关联标注</b><p>首批覆盖计算机、材料两个学科 3.2 万条记录。</p></li>
+            <li><span class="d">2026-11-19</span><b>学位论文库组合筛选上线</b><p>支持按导师姓名与答辩年份交叉筛选。</p></li>
+            <li><span class="d">2026-11-10</span><b>近代县志档案解封</b><p>62 种县志完成全文可检索整理，附地名异写对照表。</p></li>
+            <li><span class="d">2026-11-03</span><b>题录去重升级至 v4.2</b><p>支持中英混排作者名归一化，合并记录可回滚。</p></li>
+          </ul>
+        </section>
+
+        <!-- 12 榜单 -->
+        <section class="panel sec anchor" id="rank">
+          <div class="sec-head">
+            <h2>热度榜单：近 30 天访问量前列条目</h2>
+            <span class="h2tag">2026-11-25 更新</span>
+          </div>
+          <ul class="feed">
+            <li><span class="t">01</span><span class="n"><a href="/#picks">基层高血压规范化管理指南</a></span><span class="dot">·</span><span class="s">下载 3.6 万次，社区卫生方向使用集中</span><span class="st hot">榜首</span></li>
+            <li><span class="t">02</span><span class="n"><a href="/#picks">深度学习在医学影像分割中的迁移学习综述</a></span><span class="dot">·</span><span class="s">被引 316 次，开题综述引用高频</span><span class="st hot">上升</span></li>
+            <li><span class="t">03</span><span class="n"><a href="/#picks">城市更新背景下老旧社区公共空间改造路径研究</a></span><span class="dot">·</span><span class="s">下载 1.2 万次，附录量表被多次借用</span><span class="st">稳定</span></li>
+            <li><span class="t">04</span><span class="n"><a href="/#picks">馆藏古籍影印本目录与版本对照表</a></span><span class="dot">·</span><span class="s">条目 1.8 万，文史方向检索集中</span><span class="st">稳定</span></li>
+            <li><span class="t">05</span><span class="n"><a href="/#picks">2015—2025 年县域土地利用遥感数据集</a></span><span class="dot">·</span><span class="s">引用 204 次，区域研究底图首选</span><span class="st">上升</span></li>
+            <li><span class="t">06</span><span class="n"><a href="/#picks">大模型代码生成能力的可复现评测方案</a></span><span class="dot">·</span><span class="s">评论 64 条，讨论集中在测试集泄漏</span><span class="st new">新入榜</span></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="side-right" aria-label="辅助栏">
+        <div class="side-sticky">
+          <div class="panel side-box">
+            <div class="side-title">热读排行</div>
+            <ul class="list">
+              <li><span class="rk top">1</span><a href="/#picks">基层高血压规范化管理指南（2026 修订版）</a></li>
+              <li><span class="rk top2">2</span><a href="/#picks">深度学习医学影像分割迁移学习综述</a></li>
+              <li><span class="rk">3</span><a href="/#picks">城市更新与老旧社区公共空间改造路径</a></li>
+              <li><span class="rk">4</span><a href="/#picks">馆藏古籍影印本目录与版本对照表</a></li>
+              <li><span class="rk">5</span><a href="/#picks">县域土地利用遥感数据集</a></li>
+              <li><span class="rk">6</span><a href="/#picks">大模型代码生成可复现评测方案</a></li>
+            </ul>
+            <div class="side-note">榜单按近 30 天站内访问量排序，每日 09:00 更新。</div>
+          </div>
+
+          <div class="panel side-box">
+            <div class="side-title">登录提示</div>
+            <ul class="list">
+              <li>机构账号请用学校统一认证，校外访问先连 VPN</li>
+              <li>个人账号支持手机号注册，可查中文期刊与 OA 资源</li>
+              <li>外文镜像切节点后需重新授权一次</li>
+              <li>登录异常可先清缓存或用无痕窗口重试</li>
+            </ul>
+            <div class="side-note">如需开通机构学科包，请联系所在单位图书馆参考咨询台。</div>
+          </div>
+
+          <div class="panel side-box">
+            <div class="side-title">本月数据</div>
+            <ul class="list">
+              <li>新增题录 <b>18.4 万</b> 条</li>
+              <li>新增开放获取刊 <b>214</b> 种</li>
+              <li>档案解封 <b>62</b> 种县志</li>
+              <li>工具版本 <b>v4.2</b></li>
+            </ul>
+            <div class="side-note">统计区间 2026-10-26 至 2026-11-25。</div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="2" y="2" width="44" height="44" rx="11" fill="#2f7fb5"/>
+            <path d="M10 30 L24 15 L38 30" fill="none" stroke="#eaf3fa" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="14" y="29" width="20" height="4" rx="1.4" fill="#fff"/>
+            <rect x="16" y="35" width="16" height="3.4" rx="1.2" fill="#cfe4f3"/>
+          </svg>
+          <b>文献小镇</b>
+        </div>
+        <p class="foot-desc">面向高校学生与科研人员的文献检索与阅读服务平台，提供中文期刊、外文镜像、学位论文、会议论文与个人文献书架等模块的账号登录与使用说明。</p>
+      </div>
+      <div class="foot-col">
+        <h4>资源频道</h4>
+        <a href="/#cats">中文期刊</a>
+        <a href="/#cats">外文镜像</a>
+        <a href="/#cats">学位论文</a>
+        <a href="/#cats">会议论文</a>
+        <a href="/#cats">特色档案</a>
+      </div>
+      <div class="foot-col">
+        <h4>使用帮助</h4>
+        <a href="/#guide">检索指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#overview">小镇概览</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#relate">延伸方向</a>
+      </div>
+      <div class="foot-col">
+        <h4>社区与动态</h4>
+        <a href="/#feed">今日更新</a>
+        <a href="/#news">小镇资讯</a>
+        <a href="/#rank">热度榜单</a>
+        <a href="/#timeline">档案时间线</a>
+        <a href="/#comments">读者评论</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <div class="dis">页面内条目名称、评分、下载量与评论为示例内容，用于展示平台的信息组织方式；实际资源以登录后各数据库的授权范围为准。数据统计截至 2026-11-25。</div>
+      <div>© 2026 文献小镇 · 内容示例站点</div>
+    </div>
+  </div>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="返回页面顶部">↑</button>
+
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <b id="loginTitle">账号登录</b>
+      <button type="button" id="closeLogin" aria-label="关闭登录窗口">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-msg" id="loginMsg">演示环境：登录信息不会被提交或保存。</div>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="acc">账号（机构统一认证或手机号）</label>
+          <input id="acc" name="acc" type="text" autocomplete="username" placeholder="请输入机构账号或手机号">
+        </div>
+        <div class="field">
+          <label for="pwd">密码</label>
+          <input id="pwd" name="pwd" type="password" autocomplete="current-password" placeholder="请输入密码">
+        </div>
+        <button class="cta-main" type="submit" style="width:100%;margin-top:4px">登录</button>
+        <p class="modal-note">机构账号在校外访问时需先连接学校 VPN；个人账号可查阅中文期刊库与开放获取资源。忘记密码请联系所在单位图书馆参考咨询台。</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var q=document.getElementById('q');
+  var items=Array.prototype.slice.call(document.querySelectorAll('#pickCards .searchable'));
+  var noresult=document.getElementById('noresult');
+
+  function runSearch(){
+    var kw=(q.value||'').trim().toLowerCase();
+    if(!kw){
+      items.forEach(function(el){el.classList.remove('hide');});
+      noresult.classList.remove('show');
+      return;
+    }
+    var hit=0;
+    items.forEach(function(el){
+      var text=(el.textContent+' '+(el.dataset.key||'')).toLowerCase();
+      if(text.indexOf(kw)>-1){el.classList.remove('hide');hit++;}
+      else{el.classList.add('hide');}
+    });
+    if(hit===0){noresult.classList.add('show');}else{noresult.classList.remove('show');}
+    var target=document.getElementById('picks');
+    if(target && window.innerWidth<740){target.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  q.addEventListener('input',runSearch);
+  document.getElementById('qbtn').addEventListener('click',runSearch);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();runSearch();}});
+
+  var modal=document.getElementById('loginModal');
+  var msg=document.getElementById('loginMsg');
+  function openM(){modal.classList.add('open');document.getElementById('acc').focus();}
+  function closeM(){modal.classList.remove('open');}
+  document.getElementById('openLogin').addEventListener('click',openM);
+  document.getElementById('heroLogin').addEventListener('click',openM);
+  document.getElementById('closeLogin').addEventListener('click',closeM);
+  modal.addEventListener('click',function(e){if(e.target===modal){closeM();}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open')){closeM();}});
+  document.getElementById('loginForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.classList.add('show');
+  });
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body>
+          </html>
